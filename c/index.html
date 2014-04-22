@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A4P Test C</title>
+
+		<meta name = "keywords" content = "" />
+		<meta name = "description" content = "" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">
+
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+		<link href="css/test.css" rel="stylesheet" type="text/css">
+
+
+	</head>
+
+	<body>
+
+		<div ng-app>
+		  <h2>What will i do ?</h2>
+		  <div ng-controller="TodoCtrl">
+		    <span>{{remaining()}} of {{todos.length}} remaining</span>
+		    [ <a href="" ng-click="archive()">archive</a> ]
+		    <ul class="unstyled">
+		      <li ng-repeat="todo in todos">
+		        <input type="checkbox" ng-model="todo.done">
+		        <span class="done-{{todo.done}}">{{todo.text}}</span>
+		      </li>
+		    </ul>
+		    <form ng-submit="addTodo()">
+		      <input type="text" ng-model="todoText"  size="30">
+		      <input class="btn-primary" type="submit" value="add">
+		    </form>
+		  </div>
+		</div>
+
+
+	</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/angular.min.1.1.4.js"></script>
+		<script type="text/javascript" src="js/test.js"></script>
+		
+
+		
+</html>

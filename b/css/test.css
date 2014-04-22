@@ -1,0 +1,9 @@
+
+
+#slider {
+    border:1px solid red;    
+    overflow:hidden;
+}
+.Transparent {
+    opacity:0;
+}
